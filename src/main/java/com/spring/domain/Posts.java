@@ -1,4 +1,4 @@
-package Domain;
+package com.spring.domain;
 
 import jakarta.persistence.*;
 import lombok.*;
