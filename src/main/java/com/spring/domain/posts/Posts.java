@@ -1,4 +1,4 @@
-package com.spring.domain;
+package com.spring.domain.posts;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -10,7 +10,7 @@ public class Posts {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    @Column(length = 500, nullable = false)
+    @Column(length = 2000, nullable = false)
     private String title;
     @Column(columnDefinition = "TEXT", nullable = false)
     private String content;
@@ -21,5 +21,10 @@ public class Posts {
         this.title = title;
         this.content = content;
         this.author = author;
+    }
+
+    public void update(String title, String content) {
+        this.title = title;
+        this.content = content;
     }
 }
